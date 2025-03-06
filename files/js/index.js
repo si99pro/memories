@@ -7,7 +7,7 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",  // ***REPLACE WITH YOUR ACTUAL API KEY***
+  apiKey: "AIzaSyAZhVSVnTX5yzQOqqfp14ww8PoXtiCUAms",  // ***REPLACE WITH YOUR ACTUAL API KEY***
   authDomain: "memories-wa.firebaseapp.com",
   projectId: "memories-wa",
   storageBucket: "memories-wa.firebasestorage.app",
