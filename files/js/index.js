@@ -1,11 +1,10 @@
 // Import necessary Firebase modules and initialize Firebase (from firebaseConfig.js)
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js";
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js';
+import { getFirestore, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js';
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAZhVSVnTX5yzQOqqfp14ww8PoXtiCUAms",  // ***REPLACE WITH YOUR ACTUAL API KEY***
   authDomain: "memories-wa.firebaseapp.com",
@@ -30,7 +29,7 @@ function displayMessage(message, type = "info") {
 }
 
 // Function to create a new user (Sign-up)
-window.handleSignUp = async () => {
+window.handleSignUp = async function() {
     const username = document.getElementById("signup-username").value;
     const email = document.getElementById("signup-email").value;
     const password = document.getElementById("signup-password").value;
@@ -60,7 +59,7 @@ window.handleSignUp = async () => {
 };
 
 // Function to sign in an existing user (Login)
-window.handleSignIn = async () => {
+window.handleSignIn = async function() {
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value;
 
@@ -78,7 +77,7 @@ window.handleSignIn = async () => {
 };
 
 // Function to sign out the current user
-window.handleSignOut = async () => {
+window.handleSignOut = async function() {
     try {
         await signOut(auth);
         displayMessage("Signed out.", "info");
